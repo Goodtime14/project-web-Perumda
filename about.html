@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Us - UMKM Supplier</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* Hover efek untuk link footer agar lebih interaktif */
+        .footer-link {
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #ffc107 !important;
+        }
+
+        /* Stabilisasi Tombol WhatsApp Melayang */
+        .wa-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .wa-float:hover {
+            background-color: #20b858;
+            color: #FFF;
+        }
+        
+        /* Efek Hover untuk Team Card (Opsional, agar interaktif) */
+        .team-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15) !important;
+        }
+        .team-social a {
+            transition: color 0.3s ease;
+        }
+        .team-social a:hover {
+            color: #ffc107 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+                <img src="https://ui-avatars.com/api/?name=US&background=ffc107&color=212529&rounded=true&bold=true" alt="Logo UMKM" width="40" height="40" class="me-2 shadow-sm">
+                PERUMDA SUMBA TIMUR
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-dark text-white text-center py-5" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/1920/400?grayscale') center/cover;">
+        <div class="container py-5">
+            <h1 class="fw-bold display-5" data-aos="fade-up">Tentang Perusahaan Kami</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">Menjadi jembatan bagi produk lokal menuju pasar global.</p>
+        </div>
+    </section>
+
+    <section class="container py-5 mt-4">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <h2 class="fw-bold mb-4">Cerita di Balik UMKM Supplier</h2>
+                <p class="text-muted" style="text-align: justify;">
+                    Berawal dari tahun 2020, kami melihat potensi luar biasa dari produk-produk buatan pengrajin dan petani lokal Indonesia. Sayangnya, banyak dari mereka kesulitan menjangkau pasar yang lebih luas karena keterbatasan distribusi dan pemasaran.
+                </p>
+                <p class="text-muted" style="text-align: justify;">
+                    UMKM Supplier hadir sebagai solusi. Kami mengkurasi, memastikan standar kualitas (QC), dan mendistribusikan produk-produk unggulan ini agar bisa bersaing tidak hanya di pasar nasional, tetapi juga internasional.
+                </p>
+                <ul class="list-unstyled mt-4">
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> 100% Produk Asli Indonesia</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Kualitas Ekspor yang Terjaga</li>
+                    <li class="mb-2"><i class="bi bi-check-circle-fill text-warning me-2"></i> Membantu 500+ UMKM Lokal Berkembang</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 text-center" data-aos="fade-left">
+                <img src="https://picsum.photos/600/400?business" alt="Tentang UMKM Supplier" class="img-fluid rounded-4 shadow-lg w-100" style="object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light py-5">
+        <div class="container py-4">
+            <h2 class="text-center section-title mb-5">Nilai Inti Kami</h2>
+            <div class="row g-4 text-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                        <i class="bi bi-gem text-warning display-4 mb-3 d-inline-block"></i>
+                        <h4 class="fw-bold">Kualitas Premium</h4>
+                        <p class="text-muted small">Setiap produk melewati tahap Quality Control yang ketat untuk memastikan standar tinggi.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                        <i class="bi bi-globe-americas text-warning display-4 mb-3 d-inline-block"></i>
+                        <h4 class="fw-bold">Jangkauan Luas</h4>
+                        <p class="text-muted small">Sistem logistik kami dirancang untuk mengirimkan produk ke seluruh pelosok negeri dengan aman.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                        <i class="bi bi-people-fill text-warning display-4 mb-3 d-inline-block"></i>
+                        <h4 class="fw-bold">Fair Trade</h4>
+                        <p class="text-muted small">Kami memastikan para mitra UMKM mendapatkan harga beli yang adil dan menyejahterakan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 mt-4">
+        <h2 class="text-center section-title mb-5">Tim Penggerak Kami</h2>
+        <div class="row g-4 text-center">
+            
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="team-card bg-white p-4 rounded-4 shadow-sm border h-100">
+                    <img src="https://picsum.photos/300/300?10" class="rounded-circle mb-3 border border-warning border-3" style="width: 120px; height: 120px; object-fit: cover;" alt="CEO">
+                    <h5 class="fw-bold mb-1">Alfrian Talakua</h5>
+                    <p class="text-muted small mb-3">CEO & Founder</p>
+                    <div class="d-flex justify-content-center gap-3 team-social">
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-envelope fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class="team-card bg-white p-4 rounded-4 shadow-sm border h-100">
+                    <img src="https://picsum.photos/300/300?11" class="rounded-circle mb-3 border border-warning border-3" style="width: 120px; height: 120px; object-fit: cover;" alt="CMO">
+                    <h5 class="fw-bold mb-1">Siti Aminah</h5>
+                    <p class="text-muted small mb-3">Chief Marketing Officer</p>
+                    <div class="d-flex justify-content-center gap-3 team-social">
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-envelope fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                <div class="team-card bg-white p-4 rounded-4 shadow-sm border h-100">
+                    <img src="https://picsum.photos/300/300?12" class="rounded-circle mb-3 border border-warning border-3" style="width: 120px; height: 120px; object-fit: cover;" alt="COO">
+                    <h5 class="fw-bold mb-1">Rizky Pratama</h5>
+                    <p class="text-muted small mb-3">Head of Operations</p>
+                    <div class="d-flex justify-content-center gap-3 team-social">
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-envelope fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                <div class="team-card bg-white p-4 rounded-4 shadow-sm border h-100">
+                    <img src="https://picsum.photos/300/300?13" class="rounded-circle mb-3 border border-warning border-3" style="width: 120px; height: 120px; object-fit: cover;" alt="QC">
+                    <h5 class="fw-bold mb-1">Dian Sastro</h5>
+                    <p class="text-muted small mb-3">Quality Control Lead</p>
+                    <div class="d-flex justify-content-center gap-3 team-social">
+                        <a href="#" class="text-secondary"><i class="bi bi-linkedin fs-5"></i></a>
+                        <a href="#" class="text-secondary"><i class="bi bi-envelope fs-5"></i></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="bg-light py-5 border-top">
+        <div class="container text-center">
+            <h5 class="fw-bold text-muted mb-4" data-aos="fade-up">Telah Dipercaya Oleh Berbagai Ritel & Bisnis</h5>
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 gap-md-5 mt-4" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="partner-logo text-secondary m-0"><i class="bi bi-shop"></i> RetailMart</h3>
+                <h3 class="partner-logo text-secondary m-0"><i class="bi bi-cart"></i> IndoGrosir</h3>
+                <h3 class="partner-logo text-secondary m-0"><i class="bi bi-buildings"></i> MegaStore</h3>
+                <h3 class="partner-logo text-secondary m-0"><i class="bi bi-basket"></i> FreshMarket</h3>
+                <h3 class="partner-logo text-secondary m-0"><i class="bi bi-cup-hot"></i> KopiKu</h3>
+            </div>
+        </div>
+    </section>
+
+     <footer class="bg-dark text-light pt-5 pb-3 mt-5 border-top border-warning border-3">
+        <div class="container">
+            <div class="row text-md-start text-center">
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4 class="text-warning fw-bold mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                        PERUMDA SUMBA TIMUR
+                    </h4>
+                    <p class="text-white-50 small">
+                        Mitra terpercaya untuk produk UMKM lokal berkualitas ekspor. Kami menjembatani karya anak bangsa ke panggung dunia dengan harga yang jujur dan adil.
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-2 mt-3">
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none footer-link">Beranda</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none footer-link">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-white-50 text-decoration-none footer-link">Katalog Produk</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white-50 text-decoration-none footer-link">Artikel & Berita</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Layanan Pelanggan</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="faq.html" class="text-white-50 text-decoration-none footer-link">Pusat Bantuan (FAQ)</a></li>
+                        <li class="mb-2"><a href="shipping.html" class="text-white-50 text-decoration-none footer-link">Informasi Pengiriman</a></li>
+                        <li class="mb-2"><a href="returns.html" class="text-white-50 text-decoration-none footer-link">Kebijakan Retur</a></li>
+                        <li class="mb-2"><a href="privacy.html" class="text-white-50 text-decoration-none footer-link">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Hubungi Kami</h5>
+                    <ul class="list-unstyled text-white-50 small">
+                        <li class="mb-3 d-flex align-items-start justify-content-center justify-content-md-start">
+                            <i class="bi bi-geo-alt-fill text-warning me-2 mt-1"></i>
+                            <span>Jl. R Suprapto No.35 Waingapu Sumba Timur</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                            <i class="bi bi-envelope-fill text-warning me-2"></i>
+                            <a href="mailto:info@umkmsupplier.com" class="text-white-50 text-decoration-none footer-link">info@umkmsupplier.com</a>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                            <i class="bi bi-telephone-fill text-warning me-2"></i>
+                            <span>+62 852 438 222 01</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <small class="text-white-50">
+                        &copy; 2026 Alfrian Talakua. All Rights Reserved.
+                    </small>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <i class="bi bi-credit-card-fill text-white-50 fs-4 mx-1" title="Kartu Kredit"></i>
+                    <i class="bi bi-wallet-fill text-white-50 fs-4 mx-1" title="E-Wallet"></i>
+                    <i class="bi bi-bank2 text-white-50 fs-4 mx-1" title="Transfer Bank"></i>
+                    <i class="bi bi-cash-coin text-white-50 fs-4 mx-1" title="COD"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/6285243822201" class="wa-float" target="_blank" aria-label="Hubungi kami via WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 100
+        });
+    </script>
+
+</body>
+</html>
