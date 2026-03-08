@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PERUMDA SUMBA TIMUR</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Stabilisasi Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/1920/1080?4') center/cover no-repeat;
+            padding: 120px 0;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-btn {
+            margin-top: 20px;
+        }
+        
+        /* Efek Hover untuk Product Card */
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+
+        /* Hover efek untuk link footer agar lebih interaktif */
+        .footer-link {
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover {
+            color: #ffc107 !important;
+        }
+
+        /* Stabilisasi Tombol WhatsApp Melayang */
+        .wa-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .wa-float:hover {
+            background-color: #20b858;
+            color: #FFF;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="index.html">
+                <img src="https://ui-avatars.com/api/?name=US&background=ffc107&color=212529&rounded=true&bold=true" alt="Logo UMKM" width="40" height="40" class="me-2 shadow-sm">
+                PERUMDA SUMBA TIMUR
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero text-white text-center">
+        <div class="container">
+            <h1 data-aos="fade-up" class="fw-bold">Supplier Produk UMKM Berkualitas</h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="lead">Mendukung karya anak bangsa dengan produk lokal terbaik dan terpercaya.</p>
+            <a href="products.html" class="btn btn-warning btn-lg hero-btn" data-aos="zoom-in" data-aos-delay="400">
+                Explore Products
+            </a>
+        </div>
+    </section>
+
+    <section class="container py-5 mt-5">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <div class="position-relative">
+                    <div class="row g-2">
+                        <div class="col-6">
+                            <img src="https://picsum.photos/400/400?random=21" class="img-fluid rounded-3 shadow-sm" alt="Kopi Sumba">
+                        </div>
+                        <div class="col-6">
+                            <img src="https://picsum.photos/400/400?random=22" class="img-fluid rounded-3 shadow-sm" alt="Tenun Sumba">
+                        </div>
+                        <div class="col-6">
+                            <img src="https://picsum.photos/400/400?random=23" class="img-fluid rounded-3 shadow-sm" alt="Madu Hutan">
+                        </div>
+                        <div class="col-6">
+                            <img src="https://picsum.photos/400/400?random=24" class="img-fluid rounded-3 shadow-sm" alt="Kerajinan Rotan">
+                        </div>
+                    </div>
+                    <div class="position-absolute bottom-0 end-0 bg-warning text-dark p-3 rounded-start-3 shadow-sm" style="transform: translate(10px, 10px);">
+                        <h5 class="fw-bold m-0">100% Produk Lokal</h5>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" data-aos="fade-left">
+                <span class="badge bg-warning text-dark mb-2 px-3 py-2 fw-semibold">Selamat Datang</span>
+                <h2 class="fw-bold mb-4">Menghubungkan Karya Lokal dengan Pasar Global</h2>
+                <p class="text-muted mb-4" style="line-height: 1.8;">
+                    Berawal dari kepedulian terhadap potensi luar biasa Nusantara, kami menghadirkan cerita, dedikasi, dan kualitas murni dari tangan-tangan terampil pembuatnya kepada Anda. Dari kopi aromatik hingga kain tenun yang indah, setiap produk adalah cerminan kekayaan budaya dan kerja keras UMKM kami.
+                </p>
+                
+                <div class="row g-3 mb-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-5 me-2"></i>
+                            <span class="fw-semibold text-dark">Standar Mutu Ketat</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-5 me-2"></i>
+                            <span class="fw-semibold text-dark">Pemberdayaan Petani</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-5 me-2"></i>
+                            <span class="fw-semibold text-dark">Harga Grosir B2B</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-check-circle-fill text-success fs-5 me-2"></i>
+                            <span class="fw-semibold text-dark">Rantai Pasok Transparan</span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="about.html" class="btn btn-outline-dark fw-bold px-4 py-2 rounded-pill mt-2">
+                    Kenali Kami Lebih Jauh <i class="bi bi-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container py-5 mt-4">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <span class="text-warning fw-bold text-uppercase tracking-wider">Katalog Kami</span>
+            <h2 class="section-title fw-bold mt-2">Produk Unggulan</h2>
+        </div>
+        
+        <div class="row g-4">
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="https://picsum.photos/400?1" class="card-img-top" alt="Kopi Sumba">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Kopi Sumba</h5>
+                        <p class="text-danger fw-semibold">Rp 50.000</p>
+                        <a href="product-detail.html" class="btn btn-outline-warning text-dark w-100 fw-semibold">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="https://picsum.photos/400?2" class="card-img-top" alt="Madu Hutan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Madu Hutan</h5>
+                        <p class="text-danger fw-semibold">Rp 60.000</p>
+                        <a href="product-detail.html" class="btn btn-outline-warning text-dark w-100 fw-semibold">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="https://picsum.photos/400?3" class="card-img-top" alt="Tenun Sumba">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Tenun Sumba</h5>
+                        <p class="text-danger fw-semibold">Rp 250.000</p>
+                        <a href="product-detail.html" class="btn btn-outline-warning text-dark w-100 fw-semibold">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="https://picsum.photos/400?4" class="card-img-top" alt="Kerajinan Rotan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Kerajinan Rotan</h5>
+                        <p class="text-danger fw-semibold">Rp 120.000</p>
+                        <a href="product-detail.html" class="btn btn-outline-warning text-dark w-100 fw-semibold">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="https://picsum.photos/400?5" class="card-img-top" alt="Keripik Tempe Buana">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Keripik Tempe Buana</h5>
+                        <p class="text-danger fw-semibold">Rp 15.000</p>
+                        <a href="product-detail.html" class="btn btn-outline-warning text-dark w-100 fw-semibold">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="https://picsum.photos/400?6" class="card-img-top" alt="Tas Anyaman Pandan">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Tas Anyaman Pandan</h5>
+                        <p class="text-danger fw-semibold">Rp 85.000</p>
+                        <a href="product-detail.html" class="btn btn-outline-warning text-dark w-100 fw-semibold">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="https://picsum.photos/400?7" class="card-img-top" alt="Sambal Roa Khas">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Sambal Roa Khas</h5>
+                        <p class="text-danger fw-semibold">Rp 35.000</p>
+                        <a href="product-detail.html" class="btn btn-outline-warning text-dark w-100 fw-semibold">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="https://picsum.photos/400?8" class="card-img-top" alt="Kain Batik Tulis">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Kain Batik Tulis</h5>
+                        <p class="text-danger fw-semibold">Rp 300.000</p>
+                        <a href="product-detail.html" class="btn btn-outline-warning text-dark w-100 fw-semibold">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card product-card h-100 border-0 shadow-sm">
+                    <img src="https://picsum.photos/400?9" class="card-img-top" alt="Minyak Kelapa Murni (VCO)">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Minyak Kelapa Murni</h5>
+                        <p class="text-danger fw-semibold">Rp 45.000</p>
+                        <a href="product-detail.html" class="btn btn-outline-warning text-dark w-100 fw-semibold">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-dark text-light pt-5 pb-3 mt-5 border-top border-warning border-3">
+        <div class="container">
+            <div class="row text-md-start text-center">
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4 class="text-warning fw-bold mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                        PERUMDA SUMBA TIMUR
+                    </h4>
+                    <p class="text-white-50 small">
+                        Mitra terpercaya untuk produk UMKM lokal berkualitas ekspor. Kami menjembatani karya anak bangsa ke panggung dunia dengan harga yang jujur dan adil.
+                    </p>
+                    <div class="d-flex justify-content-center justify-content-md-start gap-2 mt-3">
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm rounded-circle" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Tautan Cepat</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none footer-link">Beranda</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none footer-link">Tentang Kami</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-white-50 text-decoration-none footer-link">Katalog Produk</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-white-50 text-decoration-none footer-link">Artikel & Berita</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Layanan Pelanggan</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="faq.html" class="text-white-50 text-decoration-none footer-link">Pusat Bantuan (FAQ)</a></li>
+                        <li class="mb-2"><a href="shipping.html" class="text-white-50 text-decoration-none footer-link">Informasi Pengiriman</a></li>
+                        <li class="mb-2"><a href="returns.html" class="text-white-50 text-decoration-none footer-link">Kebijakan Retur</a></li>
+                        <li class="mb-2"><a href="privacy.html" class="text-white-50 text-decoration-none footer-link">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h5 class="fw-bold mb-3 text-white">Hubungi Kami</h5>
+                    <ul class="list-unstyled text-white-50 small">
+                        <li class="mb-3 d-flex align-items-start justify-content-center justify-content-md-start">
+                            <i class="bi bi-geo-alt-fill text-warning me-2 mt-1"></i>
+                            <span>Jl. R Suprapto No.35 Waingapu Sumba Timur</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                            <i class="bi bi-envelope-fill text-warning me-2"></i>
+                            <a href="mailto:info@umkmsupplier.com" class="text-white-50 text-decoration-none footer-link">info@umkmsupplier.com</a>
+                        </li>
+                        <li class="mb-3 d-flex align-items-center justify-content-center justify-content-md-start">
+                            <i class="bi bi-telephone-fill text-warning me-2"></i>
+                            <span>+62 852 438 222 01</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary my-4">
+
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <small class="text-white-50">
+                        &copy; 2026 Alfrian Talakua. All Rights Reserved.
+                    </small>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <i class="bi bi-credit-card-fill text-white-50 fs-4 mx-1" title="Kartu Kredit"></i>
+                    <i class="bi bi-wallet-fill text-white-50 fs-4 mx-1" title="E-Wallet"></i>
+                    <i class="bi bi-bank2 text-white-50 fs-4 mx-1" title="Transfer Bank"></i>
+                    <i class="bi bi-cash-coin text-white-50 fs-4 mx-1" title="COD"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a href="https://wa.me/6285243822201" class="wa-float" target="_blank" aria-label="Hubungi kami via WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+        AOS.init({
+            duration: 800, // durasi animasi
+            once: true,    // animasi hanya berjalan sekali saat di-scroll
+            offset: 100    // jarak trigger animasi
+        });
+    </script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
